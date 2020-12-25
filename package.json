@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "greeter": "tsc src/greeter.ts"
+  },
+  "dependencies": {
+    "typescript": "^4.1.3"
+  }
+}
