@@ -1,18 +1,10 @@
-interface SquareConfig {
-  color?: string
-  width?: number
+interface SearchFunc {
+  (source: string, subString: string): boolean
 }
 
-function createSquare(squareConfig: SquareConfig) : { color: string, area: number } {
-  let newSquare = { color: 'white', area: 100 }
-  if (squareConfig.color) {
-    newSquare.color = squareConfig.color
-  }
-  if (squareConfig.width) {
-    newSquare.area = squareConfig.width * squareConfig.width
-  }
-  return newSquare
+let mySearch: SearchFunc
+
+mySearch = function(source: string, subString: string) {
+  let result = source.search(subString)
+  return result > -1
 }
-
-
-let mySquare = createSquare({ color: 'black' })
