@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "greeter": "tsc src/greeter.ts"
+    "greeter": "tsc src/greeter.ts",
+    "interface": "tsc src/interface-learn.ts"
   },
   "dependencies": {
     "typescript": "^4.1.3"
