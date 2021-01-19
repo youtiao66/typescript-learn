@@ -1,8 +1,10 @@
-interface StringArray {
-  [index: number]: string
+interface ClockInterface {
+  currentTime: Date
 }
 
-let myArray: StringArray
-myArray = ['Bob', 'Fred']
-
-let myStr: string = myArray[0]
+class Clock implements ClockInterface {
+  currentTime: Date = new Date()
+  constructor(h: number, m: number) {
+    
+  }
+}
