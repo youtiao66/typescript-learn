@@ -1,10 +1,8 @@
-interface SearchFunc {
-  (source: string, subString: string): boolean
+interface StringArray {
+  [index: number]: string
 }
 
-let mySearch: SearchFunc
+let myArray: StringArray
+myArray = ['Bob', 'Fred']
 
-mySearch = function(src, sub) {
-  let result = src.search(sub)
-  return result > -1
-}
+let myStr: string = myArray[0]
