@@ -1,17 +1,11 @@
-interface ClockInterface {
-  tick(): void
+interface Shape {
+  color: string
 }
 
-interface ClockConstructor {
-  new (hour: number, minute: number): ClockInterface
+interface Square extends Shape {
+  sideLength: number
 }
 
-const Clock: ClockConstructor = class Clock implements ClockInterface {
-  constructor(h: number, minute: number) {}
-  tick() {
-    console.log('beep beep')
-  }
-}
-
-let clock = new Clock(7, 22)
-clock.tick()
+let square = {} as Square
+square.color = 'blue'
+square.sideLength = 10
